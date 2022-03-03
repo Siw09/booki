@@ -1,8 +1,825 @@
+
+*{
+	background-size: cover;
+
+	background-repeat: no-repeat;
+
+ }
+ /* definion de quelques  propriétés genarale  */
 body{
-    width: 95%;
-    margin: auto;
+
+     width: 1280px;
+     margin: auto;
+	 color: black;
+     font-family: 'Raleway',Verdana, Tahoma, sans-serif;
+
+	 
+ }
+ h1 {
+ 	font-weight: bold;
+ 	font-size: 1.5rem;
+ 	color: black;
+ }
+
+ h2 {
+ 	color: black;
+  }
+ p {
+ 	font-size: 15px;
+ 	color: black;
+ }
+
+ a {
+     
+ 	text-decoration-line: none;
+     color: inherit;
+ }
+
+ ul {
+ 	list-style-type: none;
+ }
+
+/*  gestion du logo et  du menu de navigation  */
+ .mnavigation{
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+ }
+ .logo img {
+	 font-size: 4rem;
+	height: 70px;
+	 padding-top: 20px;
+ }
+ 
+.mnavigation nav ul {
+	display: flex;
+	justify-content: space-around;
+ 	width: max-content;
 }
 
-a{
-    text-decoration: none;
+ .mnavigation nav ul li{
+	width: max-content ;
+	padding: 50px 30px 30px 10px;
+	margin-top: -17px;
+	font-size: 1.2rem;
+	 
+	color: rgb(133, 129, 129);
+	
 }
+/* animation du menu au survol */
+
+.mnavigation nav ul li:hover{
+	color: #0065FC;	
+	border-top: 2px solid #0065FC ;
+    transition: 0.2s ease-in-out ;
+}
+/*   gestion de la barre de recherche  */
+
+input{
+	border: 2px solid #F2F2F2;
+    height: 45px;
+ 	margin-right: 0px;
+
+}
+input::placeholder{
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+}
+
+button{
+	padding: 0px 15px;
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+	background-color: #0065FC;
+	color: white;
+    height: 45px;
+ 	margin-right: 0px;
+	border: 2px solid #0065FC;
+	margin-left: -6px;
+	}
+ .buttonmobile{
+        display: none !important;        
+    }
+
+#barre{
+	height: 45px;
+	display: flex;
+	width: 320px;
+	border-radius: 15px;
+}
+form{
+	width: 90%;
+	height: 45px;
+}
+/* icon gps */
+.localisation{
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F2F2F2;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+
+/* gestion  des filtres */
+.filtres{
+	display: flex;
+	width: 800px;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 40px;
+	padding: 20px;
+}
+.filtres p{
+    font-size: 1.3rem;
+   }
+.filtres a{
+	height: 100%;
+	width: max-content;
+	padding:2px  20px 2px 0px;
+	display: flex;
+	border-radius: 30px;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #F2F2F2;
+
+
+}
+.filtres a:hover{
+	color: #0065FC;
+	background-color: #DEEBFF;
+	box-shadow: 5px 5px 10px #DEEBFF;
+	transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+
+	
+
+}
+.filtres a div{
+	padding: 15px;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #0065FC;
+	margin-left: -5px;
+	background-color: #DEEBFF;
+}
+.filtres a div:hover{
+	color: #DEEBFF;
+    transition: ease-in-out 0.5s;
+    background-color: #0065FC;
+}
+
+/*  info */
+#info {
+		display: flex;
+		width: max-content;
+		padding: 10px;
+		align-items: center;
+		justify-content: space-between;
+}
+#info div{
+	padding: 5px 10px ;
+	margin: 5px;
+ 	color: #0065FC;
+	border-radius: 20px;
+	border: 2px solid #DEEBFF;
+}
+#info div:hover{
+    box-shadow: 2.5px 2.5px 5px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    color: #DEEBFF;
+    background-color: #0065FC;
+    transition: ease-in-out 0.4s;
+}
+
+                /*     Gestion de la partie consernant les hébergement  */
+
+
+/* conteur general */
+
+ .hebergecontainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	width: 1300px;
+	height: max-content;
+}
+/* conteneur des hébergement à marseille */
+ .hebergementamarseille{
+	 background-color: #F2F2F2;
+	 width: 770px;
+	 padding: 30px ;
+	 height: 600px;
+	 border-radius: 15px;
+
+ }
+ /* conteneur des plus populaire */
+.populaire{
+	background-color: #F2F2F2;
+	width: 400px; ;
+	border-radius: 15px;
+	padding: 30px;
+	height:600px;
+}
+/* conteneur des hébergement à marseille */
+
+#hebergementamarseille{
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	height: 500px;
+    width: 760px;
+}
+/* les carte contenant les images et descriprion  */
+#hebergementamarseille a{
+	background-color: white;
+	height: 185px;
+	width: 215px;
+	margin: 5px;
+	border-radius: 15px;
+	border: 5px solid white;
+	padding: 5px;
+	box-shadow: 2px 2px 8px #d9d8d8;
+}
+
+#hebergementamarseille a .image{
+    height: 100px;
+	border-radius:10px 10px 0px 0px ;
+	box-sizing: border-box;
+	background-position: auto;
+    
+}
+
+.descriptionherbergement {
+    height: max-content;
+	padding: 3px;
+}
+.descriptionherbergement h3, .descriptionherbergement p,.descriptionherbergement  .etoiles{ 
+    margin: 5px;
+    
+}
+/* suite de le gestion de la partie concernant les hébergement popullaire  */
+
+.populaire .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    }
+#populaire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2px 1px 20px 1px ;
+    height: 550px;
+
+}
+
+#populaire a {
+        height: 140px;
+        display: flex;
+        padding: 5px;
+        box-shadow: 3px 3px 10px #d9d8d8;
+        border-radius: 15px;
+        background-color: white;
+        align-items: center;
+        width: 380px;
+    }
+#populaire a .carte{
+        width: 150px;
+        border-radius: 15px 0px 0px 15px ;
+        margin: 2px;
+        height: 100%;
+    }
+.fa-chart-line{
+    font-size: 1.5rem;
+}
+/* Animation des carte d'hébergent et d'activites au survole*/
+#hebergementamarseille a:hover,#populaire a:hover, .activiteschild a:hover
+{
+    transition: 0.5s;
+    box-shadow: 5px 12px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
+    transform: scale(1.1);
+}
+/* les couleurs pour les icons eetoile */
+.blue{
+	color: #0065FC;
+	font-size: 0.9rem;
+
+}
+.grey{
+	color: #d9d8d8;
+	font-size: 0.9rem;
+}
+
+/* gestion de la partie concernant les activites  */
+#activites{
+		width: 1280px;
+		margin: 10px;
+
+	}
+.activites{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	height: 400px;
+	margin: 10px;
+}
+.activiteschild{
+	display: flex;
+	 width: 610px ;
+	 padding: 5px;
+	 align-items: center;
+	 justify-content: space-around;
+}
+.activiteschild a{
+	box-shadow: 3px 3px 10px #d9d8d8;
+	height: max-content;
+	width: max-content;
+	padding: 0px 0px 2px 0px;
+	border-radius: 15px;
+
+
+}
+
+ .imagehigh{
+
+height: 300px;
+width: 265px;
+}
+.activites h3{
+	padding-left: 20px;
+}
+#imagesmal{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#imagesmal a{
+	height: 167px;
+	margin: 13px 30px;
+	width: 265px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 3px 3px 10px #d9d8d8;
+	border-radius: 15px;
+}
+
+
+
+/* gestion des images d'arrière plan des carte de la partie hébergement  */
+
+.bgheberge1{
+	background-image: url(../images/hebergements/1.jpg);}
+.bgheberge2{
+background-image: url(../images/hebergements/2.jpg);}
+.bgheberge3{
+background-image: url(../images/hebergements/3.jpg);}
+.bgheberge4{
+background-image: url(../images/hebergements/4.jpg);}
+.bgheberge5{
+background-image: url(../images/hebergements/5.jpg);}
+.bgheberge6{
+background-image: url(../images/hebergements/6.jpg);}
+.bgheberge7{
+background-image: url(../images/hebergements/7.jpg);}
+.bgheberge8{
+background-image: url(../images/hebergements/8.jpg);}
+.bgheberge9{
+background-image: url(../images/hebergements/9.jpg);}
+ 
+/* gestion des images d'arrière plan des carte de la partie Activites  */
+
+
+.bgactivites1{  background-image: url(../images/activites/1.jpg); border-radius: 15px 15px 0px 0px;}
+.bgactivites2{	height: 140px !important;width: 100%;background-image: url(../images/activites/2.jpg); border-radius: 15px 15px 0px 0px; background-size: cover;}
+.bgactivites3{ 	height: 140px !important;width: 100%;background-image: url(../images/activites/3.jpg); border-radius: 15px 15px 0px 0px;}
+.bgactivites4{  background-image: url(../images/activites/4.jpg); border-radius: 15px 15px 0px 0px;}
+.bgactivites5{	height: 140px !important;width: 100%;background-image: url(../images/activites/5.jpg); border-radius: 15px 15px 0px 0px;}
+.bgactivites6{	height: 140px !important;width: 100%;background-image: url(../images/activites/6.jpg); border-radius: 15px 15px 0px 0px;}
+
+
+ 	/**/
+ 	/*F o o t e r */
+ 	/**/
+ 	footer {
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		justify-content: space-around;
+ 		background-color: #F2F2F2;
+ 		padding: 10px;
+ 		margin: 10px;
+ 		width: 100%;
+ 		height: auto;
+ 	}
+
+ 	/*.nav_footer {*/
+ 		footer nav{
+ 		display: flex;
+ 		flex-wrap: wrap;
+ 		justify-content: flex-start;
+ 		background-color: #F2F2F2;
+ 		padding: 10px;
+ 		margin: 10px;
+ 		width: 80%;
+ 	}
+
+ 
+ 	footer h3 {
+ 		/* margin: 2px 0px 12px 10px; */
+
+ 		font-weight: bold;
+		 font-size: 1.3rem;
+		 width: max-content;
+ 	}
+
+ 	footer ul {
+ 		padding: 6px ;
+ 	}
+
+ 	footer li {
+ 		padding: 5px;
+		 width: max-content;
+		 font-size: 1rem;
+
+ 	}
+	 footer li:hover{
+		 color: #0065FC;
+		 transform: scale(1.1);
+         transition: ease-in-out 0.3s;
+	 }
+
+ 	
+ 	/*
+ 	}*/
+
+
+
+
+	                             /* G E S T I O N   D E   L A   R E S P O N S I V I T E */
+
+
+								                    /* TABLETTE */
+@media  screen and (max-width: 992px) {
+
+    body{
+
+        width: 95%;
+        margin: auto;
+        color: black;
+    
+
+         }
+
+    
+    .filtres a div{
+        padding: 15px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0065FC;
+        margin-left: -5px;
+        background-color: #DEEBFF;
+    }
+
+            /*     Gestion de la partie consernant les hébergement  */
+
+
+/* conteur general */
+
+.hebergecontainer{
+
+    flex-direction: column-reverse;
+	width: 98%;
+    margin: auto;
+	height: max-content;
+}
+
+/* gestion  des filtres */
+.filtres{
+	display: flex;
+	width: 98%;
+	flex-wrap: wrap;
+    margin-bottom: 10%;
+
+}
+
+.filtres a{
+    margin: 14px 8px ;
+    width: max-content;
+    font-size: 1.3rem;
+}
+.filtres p{
+    font-size: 1.6rem;
+    padding:10px 2px;
+    margin-top: -2px;
+    display: none;
+}
+
+#info {
+    margin: 60px 5px 5px ;
+  
+}
+
+/* conteneur des hébergement à marseille */
+.hebergementamarseille{
+    width: 98%;
+    margin: auto;
+    height: max-content;
+}
+/* conteneur des plus populaire */
+.populaire{
+   width: 98%; ;
+   height:max-content;
+   margin: auto;
+}
+/* conteneur des hébergement à marseille */
+
+#hebergementamarseille{
+   padding: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   height: max-content;
+   width: 98%;
+}
+
+/* les carte contenant les images et descriprion  */
+#hebergementamarseille a{
+	height: 200px;
+    margin-top: 20px;
+	width: 45%;
+	border: 3px solid white;
+}
+
+
+#hebergementamarseille a .image{
+    height: 55%;
+}
+#hebergementamarseille p
+
+/* suite de le gestion de la partie concernant les hébergement popullaire  */
+
+.populaire .title{
+    font-size: 1.5rem;
+    }
+#populaire{
+    padding: 2px 1px 20px 1px ;
+    height: max-content;
+}
+
+#populaire a {
+        height: 190px;
+        width: 90%;
+        margin: 15px auto;
+    }
+#populaire a .carte{
+        width:40%;
+        border-radius: 15px 0px 0px 15px ;
+        margin: 2px;
+        height: 100%;
+    }
+.fa-chart-line{
+    font-size: 1.8rem;
+}
+
+.populaire h4,#hebergementamarseille h3{
+    font-size: 1.5rem;
+}
+.populaire p, .fa-star, #hebergementamarseille p{
+    font-size: 1.3rem;
+}
+
+/* gestion de la partie concernant les activites  */
+#activites{
+    width: 98%;
+    margin: auto;
+
+}
+.activites{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-around;
+align-items: center;
+height: max-content;
+margin: auto;
+}
+.activiteschild{
+ width: 98% ;
+ padding: 5px;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: space-around;
+}
+.activiteschild a{
+box-shadow: 3px 3px 10px #d9d8d8;
+height: max-content;
+width: inherit;
+padding: 0px 0px 2px 0px;
+border-radius: 15px;
+
+
+}
+
+.imagehigh{
+
+height: 300px;
+width: inherit;
+}
+.activites h3{
+padding-left: 20px;
+font-size: 1.5rem;
+}
+#imagesmal{
+width: inherit;
+}
+#imagesmal a{
+width: inherit;
+}
+/*  gestion du menu de navigation  */
+
+.logo img {
+   height: 100px;
+}
+
+
+.mnavigation nav ul li{
+   font-size: 1.5rem;
+   padding: 48px 30px 30px 10px;
+   
+}
+
+
+
+
+
+}
+
+
+                        /*Mobile  */
+
+
+
+@media screen and ( max-width: 768px) {
+
+    body{
+        width: 98%;
+        margin: auto;
+        align-items: center;
+    }
+
+/*  gestion du logo et  du menu de navigation  */
+.mnavigation{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.logo img {
+   height: 160px;
+   display: flex;   
+   padding-top: 20px;
+   margin-right: -150px
+ }
+
+.mnavigation nav ul {
+   display: flex;
+    width: 110%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mnavigation nav ul li{
+   width: 50% ;
+   font-size: 1.8rem;
+   text-align: center;
+   padding:15% 33%;    
+   color: rgb(133, 129, 129);
+   border-bottom: 2px solid #d9d8d8 ;
+   
+}
+/* animation du menu au survol */
+
+.mnavigation nav ul li:hover{
+   border-top: none;
+   border-bottom: 2px solid #0065FC ;
+}
+/*   gestion de la barre de recherche  */
+
+input{
+	border: 2px solid #F2F2F2;
+    height: 45px;
+ 	margin-right: 0px;
+
+}
+.buttonordi{
+    display: none;
+}
+/* gestion de l'icone loup pour les mobiles
+ */
+ .buttonmobile{
+        display: flex!important;  
+	  
+    }
+
+#barre{
+	height: 45px;
+	display: flex;
+	width:80%;
+	border-radius: 15px;
+}
+form{
+	width: 90%;
+	height: 45px;
+}
+
+
+/* gestion des partie hebergement  */
+
+
+#populaire a,#hebergementamarseille a,.activiteschild a{
+    height: 200px;
+    width: 90% ;
+    margin: 15px auto;
+}
+#populaire a {
+ display: flex;
+ flex-direction: column;
+}
+
+#populaire a .carte{
+    width:100%;
+    border-radius: 15px 15px 0px 0px ;
+    margin: 2px;
+    height: 50%;
+}
+.descriptionpopulaire{
+    height: 50%;
+}
+
+.descriptionpopulaire p, .descriptionpopulaire h4, .descriptionpopulaire .etoiles {
+    padding: 0px !important;
+    margin: 2px 2px 0px -170px !important;
+    text-align: start !important
+
+}
+
+.imagehigh, #imagesmal .imagesmal{
+    height: 200px !important;
+    width: 100%;
+    margin: 0px;
+    background-size: cover;
+
+}
+
+#imagesmal a, .activiteschild a{
+	height: 320px;
+    margin: 20px auto;
+ }
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
