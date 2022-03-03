@@ -476,7 +476,7 @@ background-image: url(../images/hebergements/9.jpg);}
 								                    /* TABLETTE */
 @media  screen and (max-width: 992px) {
 
-    body{
+    body,main{
 
         width: 95%;
         margin: auto;
@@ -484,6 +484,7 @@ background-image: url(../images/hebergements/9.jpg);}
     
 
          }
+
 
     
     .filtres a div{
