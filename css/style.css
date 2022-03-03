@@ -556,6 +556,7 @@ background-image: url(../images/hebergements/9.jpg);}
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
+   Margin-top:50px;
    height: max-content;
    width: 98%;
 }
@@ -706,10 +707,10 @@ width: inherit;
 }
 
 .mnavigation nav ul li{
-   width: 50% ;
+   width: 45% ;
    font-size: 1.8rem;
    text-align: center;
-   padding:15% 33%;    
+   padding:15% 31%;    
    color: rgb(133, 129, 129);
    border-bottom: 2px solid #d9d8d8 ;
    
