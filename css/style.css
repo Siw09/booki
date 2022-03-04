@@ -62,7 +62,7 @@ body{
 	padding: 50px 30px 30px 10px;
 	margin-top: -17px;
 	font-size: 1.2rem;
-	 
+	 transition: 0.2s ease-in-out ;
 	color: rgb(133, 129, 129);
 	
 }
